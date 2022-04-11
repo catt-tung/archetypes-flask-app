@@ -1,4 +1,5 @@
 #models 
+from email import contentmanager
 from myapp import db, login_manager
 from werkzeug.security import generate_password_hash, check_password_hash
 #allows to set up isAuthenticate etc 
@@ -18,6 +19,7 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(64), unique=True, index=True)
     username = db.Column(db.String(64), unique=True, index=True)
     password_hash = db.Column(db.String(128))
+    profile = db.relationship("Profile", cascade='all', uselist=False)
 
     def __init__(self, email, username, password):
         self.email = email
@@ -31,3 +33,32 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return f"Username {self.username}"
 
+#Profile Model
+class Profile(db.Model):
+    __tablename__ = 'profiles'
+
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    posts = db.relationship('Post', backref='author', lazy=True)
+
+    def __init__(self, user_id):
+        self.user_id = user_id
+
+#Post Model
+class Post(db.Model):
+    __tablename__ = 'posts'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(140), nullable=False)
+    date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    category = db.Column(db.Text, nullable=False)
+    content = db.Column(db.Text, nullable=False)
+    profile_id = db.Column(db.Integer, db.ForeignKey('profiles.id'), nullable=False)
+
+    def __init__(self, title, category, content, profile_id):
+        self.title = title
+        self.content = content
+        self.category = category
+        self.profile_id = profile_id
+    
+    def __repr__(self):
+        return f"Post ID: {self.id} -- Date: {self.date} --- Title: {self.Title}"
