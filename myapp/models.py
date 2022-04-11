@@ -33,6 +33,8 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return f"Username {self.username}"
 
+
+
 #Profile Model
 class Profile(db.Model):
     __tablename__ = 'profiles'
