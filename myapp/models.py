@@ -19,7 +19,7 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(64), unique=True, index=True)
     username = db.Column(db.String(64), unique=True, index=True)
     password_hash = db.Column(db.String(128))
-    profile = db.relationship("Profile", cascade='all', uselist=False)
+    posts = db.relationship('Post', backref='author', lazy=True)
 
     def __init__(self, email, username, password):
         self.email = email
@@ -35,16 +35,6 @@ class User(db.Model, UserMixin):
 
 
 
-#Profile Model
-class Profile(db.Model):
-    __tablename__ = 'profiles'
-
-    id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    posts = db.relationship('Post', backref='author', lazy=True)
-
-    def __init__(self, user_id):
-        self.user_id = user_id
 
 #Post Model
 class Post(db.Model):
@@ -54,13 +44,13 @@ class Post(db.Model):
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     category = db.Column(db.Text, nullable=False)
     content = db.Column(db.Text, nullable=False)
-    profile_id = db.Column(db.Integer, db.ForeignKey('profiles.id'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
-    def __init__(self, title, category, content, profile_id):
+    def __init__(self, title, category, content, user_id):
         self.title = title
         self.content = content
         self.category = category
-        self.profile_id = profile_id
+        self.user_id = user_id
     
     def __repr__(self):
         return f"Post ID: {self.id} -- Date: {self.date} --- Title: {self.Title}"
