@@ -1,16 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="jumbotron">
-        <h1>Posts</h1>
+        <h1>Welcome to the Archetypes Story Collector!</h1>
+        <h6>Login or Register an account to get started</h6>
+        <h1>All Stories</h1>
     </div>
     <div class="container">
         {% for post in posts.items %}
             <div class="card">
                 <div class="car-boy">
-                    <h2>
+                    <h3>
                         <a class="card-title" href="{{url_for('posts.post', post_id=post.id)}}">{{post.title}}</a>
                         <a href="{{url_for('users.user_posts', username=post.author.username)}}">Written by: {{post.author.username}}</a>
-                    </h2>
+                    </h3>
                     <p>Published on: {{post.date.strftime('%Y - %m - %d')}}</p>
                     <a class="btn btn-primary" href="{{url_for('posts.post', post_id=post.id)}}">Read Post</a>
                 </div>
