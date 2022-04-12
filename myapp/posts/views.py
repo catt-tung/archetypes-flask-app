@@ -50,7 +50,7 @@ def update(post_id):
         form.content.data = post.content
         form.category.data = post.category
 
-    return render_template('create_post.html',title='Updating',form=form)
+    return render_template('update_post.html',title='Updating',form=form)
 
 # Delete
 @posts.route('/<int:post_id>/delete',methods=['GET','POST'])
