@@ -72,7 +72,7 @@ def delete_post(post_id):
 def post_child():
     page = request.args.get('page', 1, type=int)
     posts = Post.query.filter_by(category = 'Child').paginate(page=page, per_page=5) 
-    return render_template('index.html', posts=posts)
+    return render_template('child.html', posts=posts)
 
 #Victim
 @posts.route('/victim')
