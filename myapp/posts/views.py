@@ -93,4 +93,4 @@ def post_saboteur():
 def post_prostitute():
     page = request.args.get('page', 1, type=int)
     posts = Post.query.filter_by(category = 'Prostitute').paginate(page=page, per_page=5) 
-    return render_template('index.html', posts=posts)
+    return render_template('prostitute.html', posts=posts)
