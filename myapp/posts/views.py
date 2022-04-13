@@ -79,7 +79,7 @@ def post_child():
 def post_victim():
     page = request.args.get('page', 1, type=int)
     posts = Post.query.filter_by(category = 'Victim').paginate(page=page, per_page=5) 
-    return render_template('index.html', posts=posts)
+    return render_template('victim.html', posts=posts)
 
 #Saboteur
 @posts.route('/saboteur')
