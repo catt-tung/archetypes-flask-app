@@ -23,27 +23,18 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{{url_for('core.index')}}">All Stories</a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{url_for('core.info')}}">About</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
+                    Stories by Archetypes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="{{url_for('posts.post_child')}}">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="{{url_for('posts.post_child')}}">Child Archetype Stories</a>
+                    <a class="dropdown-item" href="{{url_for('posts.post_victim')}}">Victim Archetype Stories</a>
+                    <a class="dropdown-item" href="{{url_for('posts.post_saboteur')}}">Saboteur Archetype Stories</a><a class="dropdown-item" href="{{url_for('posts.post_prostitute')}}">Prostitute Archetype Stories</a>
                     </div>
-                </li>
-                <li class="nav-link">
-                    <a href="{{url_for('posts.post_child')}}">Child Stories</a>
-                </li>
-                <li class="nav-link">
-                    <a href="{{url_for('posts.post_victim')}}">Victim Stories</a>
-                </li>
-                <li class="nav-link">
-                    <a href="{{url_for('posts.post_saboteur')}}">Saboteur Stories</a>
-                </li>
-                <li class="nav-link">
-                    <a href="{{url_for('posts.post_prostitute')}}">Prostitute Stories</a>
                 </li>
 
                 {% if current_user.is_authenticated %}
