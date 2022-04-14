@@ -43,7 +43,7 @@ h6 {
   color: #22223b;
 }
 
-p, li, cite, blockquote {
+p, li {
   font-family: 'Mulish', sans-serif;
   font-size: 1.1rem;
   color: #22223b;
@@ -180,4 +180,36 @@ a:hover {
 
 .form-group {
   margin: 1rem;
+}
+
+#home-page-intro {
+  text-align: center;
+  margin: 2rem;
+}
+
+figure {
+  border: solid 1px #8d7385;
+  margin: 2rem;
+  padding: 3rem;
+  background-color: rgba(246, 238, 246, 0.6);
+}
+
+blockquote {
+  font-family: 'Flamenco', cursive;
+  font-size: 1.2rem;
+  border-left: 8px solid #ccc;
+  padding: 0.5em 20px;
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+cite, figcaption {
+  font-family: 'Flamenco', cursive;
 }
