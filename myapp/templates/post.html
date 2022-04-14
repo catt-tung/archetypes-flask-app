@@ -1,28 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="jumbotron">
-  <div class="page-header">
-    <h1>{{ post.title }}</h1>
-  </div>
-  <div class="single-post-content">
-    <h4 id="written-by">Written by: {{post.author.username}}</h4>
-    <h6>Published: {{ post.date.strftime('%B %d, %Y') }}</h6>
-    <h6>Archetype: {{post.category}}</h6>
-    <p>{{post.content}}</p>
-  </div>
-    <div class="edit-delete">
-      {% if post.author == current_user %}
-        <div class="button-spacing">
-          <a class="btn btn-primary" href="{{ url_for('posts.update', post_id=post.id) }}">Edit this Story</a>
-          <br>
-        </div>
-        <div class="button-spacing">
-          <form action="{{ url_for('posts.delete_post', post_id=post.id) }}" method="POST">
-            <input class="btn btn-danger" type="submit" value="Delete">
-          </form>
-        </div>
-      {% endif %}
+  <div class="one-post">
+    <div class="page-header">
+      <h1>{{ post.title }}</h1>
     </div>
+    <div class="single-post-content">
+      <h4 id="written-by">Written by: {{post.author.username}}</h4>
+      <h6>Published: {{ post.date.strftime('%B %d, %Y') }}</h6>
+      <h6>Archetype: {{post.category}}</h6>
+      <p>{{post.content}}</p>
+    </div>
+  </div>
+      <div class="edit-delete">
+        {% if post.author == current_user %}
+          <div class="button-spacing">
+            <a class="btn btn-primary" href="{{ url_for('posts.update', post_id=post.id) }}">Edit this Story</a>
+            <br>
+          </div>
+          <div class="button-spacing">
+            <form action="{{ url_for('posts.delete_post', post_id=post.id) }}" method="POST">
+              <input class="btn btn-danger" type="submit" value="Delete">
+            </form>
+          </div>
+        {% endif %}
+      </div>
+  
 </div>
 
 {% endblock content %}
