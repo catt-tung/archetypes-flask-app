@@ -210,6 +210,10 @@ blockquote:before {
   vertical-align: -0.4em;
 }
 
+.card-font {
+  font-size: 0.9rem;
+}
+
 cite, figcaption {
   font-family: 'Flamenco', cursive;
 }

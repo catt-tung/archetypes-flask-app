@@ -31,7 +31,7 @@
                     <div class="car-boy">
                         <h4><a class="card-title" href="{{url_for('posts.post', post_id=post.id)}}">{{post.title}}</a></h4>
                         <h6>Written by: <a href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}</a></h6>
-                        <p>Archetype: {{post.category}}, Published: {{post.date.strftime('%Y - %m - %d')}}</p>
+                        <p class="card-font">Archetype: {{post.category}}, Published: {{post.date.strftime('%Y - %m - %d')}}</p>
                         <a class="btn btn-primary" href="{{url_for('posts.post', post_id=post.id)}}">Read Post</a>
                     </div>
                 </div>
