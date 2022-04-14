@@ -221,3 +221,7 @@ cite, figcaption {
 #credits-box {
   margin: 0 0 5rem 0;
 }
+
+.center-this-text {
+  text-align: center;
+}
