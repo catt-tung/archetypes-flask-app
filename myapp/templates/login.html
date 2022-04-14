@@ -4,11 +4,13 @@
     <div class="page-header">
         <h1>Login to get started</h1>
     </div>
-    <form method="POST">
-        {{form.hidden_tag()}}
-        {{form.email.label}}{{form.email}}<br>
-        {{form.password.label}}{{form.password}}<br>
-        {{form.submit()}}
-    </form>
+    <div class="div-backdrop">
+        <form method="POST">
+            {{form.hidden_tag()}}
+            {{form.email.label}}{{form.email}}<br>
+            {{form.password.label}}{{form.password}}<br>
+            {{form.submit()}}
+        </form>
+    </div>
 </div>
 {% endblock %}
