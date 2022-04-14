@@ -1,1 +1,1 @@
-# archetypes-flask-app
+# Survival Archetypes Story Collector
