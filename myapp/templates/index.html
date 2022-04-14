@@ -7,10 +7,12 @@
             </div>
             <h6>Login or Register an account to add your stories</h6>
             <h6>Learn the ropes: <a href="{{url_for('core.info')}}">What are the Survival Archetypes, and why are we collecting stories?</a></h6>
-            <h1>All Stories</h1>
+            <div class="page-header">
+                <h1>All Stories</h1>
+            </div>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row" id="center-these-cards">
                 {% for post in posts.items %}
                     <div class="card">
                         <div class="car-boy">

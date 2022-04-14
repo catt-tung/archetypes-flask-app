@@ -105,3 +105,9 @@ a:hover {
   background-color: #bbabb6;
   color: #fbf8ea;
 }
+
+#center-these-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
