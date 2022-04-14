@@ -7,7 +7,7 @@
             </div>
         </div>
     {% for post in posts.items %}
-    <div>
+    <div class="posts-page-post">
         <h4>
             <a href="{{url_for('posts.post', post_id=post.id)}}">{{post.title}}</a>
         </h4>

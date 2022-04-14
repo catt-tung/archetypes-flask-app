@@ -71,26 +71,26 @@ def delete_post(post_id):
 @posts.route('/child')
 def post_child():
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.filter_by(category = 'Child').paginate(page=page, per_page=5) 
+    posts = Post.query.filter_by(category = 'Child').paginate(page=page, per_page=6) 
     return render_template('child.html', posts=posts)
 
 #Victim
 @posts.route('/victim')
 def post_victim():
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.filter_by(category = 'Victim').paginate(page=page, per_page=5) 
+    posts = Post.query.filter_by(category = 'Victim').paginate(page=page, per_page=6) 
     return render_template('victim.html', posts=posts)
 
 #Saboteur
 @posts.route('/saboteur')
 def post_saboteur():
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.filter_by(category = 'Saboteur').paginate(page=page, per_page=5) 
+    posts = Post.query.filter_by(category = 'Saboteur').paginate(page=page, per_page=6) 
     return render_template('saboteur.html', posts=posts)
 
 #Prostitute
 @posts.route('/prostitute')
 def post_prostitute():
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.filter_by(category = 'Prostitute').paginate(page=page, per_page=5) 
+    posts = Post.query.filter_by(category = 'Prostitute').paginate(page=page, per_page=6) 
     return render_template('prostitute.html', posts=posts)

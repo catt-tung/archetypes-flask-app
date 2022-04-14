@@ -2,10 +2,12 @@
 {% block content %}
 <div class="jumbotron">
   <h1>{{ post.title }}</h1>
-  <h4>Written by: {{post.author.username}}</h4>
-  <h6>Published: {{ post.date.strftime('%B %d, %Y') }}</h6>
-  <h6>Archetype: {{post.category}}</h6>
-  <p>{{post.content}}</p>
+  <div class="single-post-content">
+    <h4>Written by: {{post.author.username}}</h4>
+    <h6>Published: {{ post.date.strftime('%B %d, %Y') }}</h6>
+    <h6>Archetype: {{post.category}}</h6>
+    <p>{{post.content}}</p>
+  </div>
     {% if post.author == current_user %}
       <div>
         <a class="btn btn-secondary" href="{{ url_for('posts.update', post_id=post.id) }}">Edit this Story</a>
@@ -16,4 +18,5 @@
       </form>
     {% endif %}
 </div>
+
 {% endblock content %}

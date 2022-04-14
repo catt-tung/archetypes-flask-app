@@ -20,16 +20,18 @@
         <h3>All Saboteur Archetype Stories</h3>
     </div>
     <div class="container">
-        {% for post in posts.items %}
-            <div class="card">
-                <div class="car-boy">
-                    <h4><a class="card-title" href="{{url_for('posts.post', post_id=post.id)}}">{{post.title}}</a></h4>
-                    <h6>Written by: <a href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}</a></h6>
-                    <p>Archetype: {{post.category}}, Published on: {{post.date.strftime('%Y - %m - %d')}}</p>
-                    <a class="btn btn-primary" href="{{url_for('posts.post', post_id=post.id)}}">Read Post</a>
+        <div class="row">
+            {% for post in posts.items %}
+                <div class="card">
+                    <div class="car-boy">
+                        <h4><a class="card-title" href="{{url_for('posts.post', post_id=post.id)}}">{{post.title}}</a></h4>
+                        <h6>Written by: <a href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}</a></h6>
+                        <p>Archetype: {{post.category}}, Published: {{post.date.strftime('%Y - %m - %d')}}</p>
+                        <a class="btn btn-primary" href="{{url_for('posts.post', post_id=post.id)}}">Read Post</a>
+                    </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 
     <nav aria-label="Page Navigation example">

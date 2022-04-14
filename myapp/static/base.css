@@ -3,41 +3,96 @@ body {
   background-size: cover;
 }
 
+.favicon {
+  margin-left: 20px;
+}
+
 h1 {
   font-family: 'Square Peg', cursive;
   font-size: 4em;
+  color: #22223b;
 }
 
 h2 {
   font-family: 'Square Peg', cursive;
   font-size: 3rem;
+  color: #22223b;
 }
 
 h3 {
   font-family: 'Square Peg', cursive;
   font-size: 2.5rem;
+  color: #22223b;
 }
 
 h4 {
   font-family: 'Flamenco', cursive;
   font-size: 2rem;
+  color: #22223b;
 }
 
 h5, .form-group {
   font-family: 'Flamenco', cursive;
   font-size: 1.4rem;
+  color: #22223b;
 }
 
 h6 {
   font-family: 'Flamenco', cursive;
   font-size: 1.3rem;
+  color: #22223b;
 }
 
 p, li, cite, blockquote {
   font-family: 'Mulish', sans-serif;
   font-size: 1.1rem;
+  color: #22223b;
 }
 
 .form-control {
   font-family: 'Mulish', sans-serif;
+  color: #22223b;
+}
+
+a {
+  color: #776373;
+  text-decoration: none;
+}
+
+.card {
+  margin: 10px;
+  max-width: 26rem;
+  text-align: center;
+  padding: 10px;
+  border: solid 2px #675a69;
+  background-color: rgba(251, 248, 234, 0.7);
+}
+
+.card-title-format {
+  padding: 15px 15px 0px 15px;
+  text-align: left;
+}
+
+.card-written-by {
+  margin: 0;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.allstories-page {
+  max-width: 1920px;
+  margin: auto;
+}
+
+.btn-primary {
+  font-family: 'Mulish', sans-serif;
+  color: #675a69;
+  background-color: #f4e1d9;
+  border-radius: 0px;
+  border: 0;
+}
+
+.btn-primary:hover {
+  background-color: #bbabb6;
+  color: #f4e1d9;
 }
