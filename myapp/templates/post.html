@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="jumbotron">
-  <h1>{{ post.title }}</h1>
+  <div class="page-header">
+    <h1>{{ post.title }}</h1>
+  </div>
   <div class="single-post-content">
     <h4>Written by: {{post.author.username}}</h4>
     <h6>Published: {{ post.date.strftime('%B %d, %Y') }}</h6>

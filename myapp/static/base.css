@@ -93,7 +93,7 @@ a:hover {
   margin: auto;
 }
 
-.btn-primary {
+.btn-primary, .btn-outline-info{
   font-family: 'Mulish', sans-serif;
   color: #675a69;
   background-color: #f4e1d9;
@@ -101,7 +101,7 @@ a:hover {
   border: 0;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-outline-info:hover {
   background-color: #bbabb6;
   color: #fbf8ea;
 }
@@ -110,4 +110,11 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
 }
