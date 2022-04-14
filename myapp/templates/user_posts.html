@@ -8,10 +8,10 @@
         </div>
     {% for post in posts.items %}
     <div>
-        <h3>
+        <h4>
             <a href="{{url_for('posts.post', post_id=post.id)}}">{{post.title}}</a>
-        </h3>
-        Written By: <a href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}</a>
+        </h4>
+        <h6>Written By: <a href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}</a></h6>
         <h6>Archetype: {{post.category}}</h6>
         <p class="text-muted">
             Published On: {{post.date.strftime("%y-%m-%d")}}

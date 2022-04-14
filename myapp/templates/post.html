@@ -2,9 +2,9 @@
 {% block content %}
 <div class="jumbotron">
   <h1>{{ post.title }}</h1>
-  <h2>Written by: {{post.author.username}}</h2>
-  <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
-  <h4>Archetype: {{post.category}}</h4>
+  <h4>Written by: {{post.author.username}}</h4>
+  <h6>Published: {{ post.date.strftime('%B %d, %Y') }}</h6>
+  <h6>Archetype: {{post.category}}</h6>
   <p>{{post.content}}</p>
     {% if post.author == current_user %}
       <div>
