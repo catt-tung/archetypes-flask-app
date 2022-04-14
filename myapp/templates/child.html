@@ -1,36 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="jumbotron">
-        <div class="page-header">
-            <h1>Collective Child Archetype Stories</h1>
-        </div>
-        <div>
-            <h3>About the Child Archetype: Guardian of Innocence and Responsibility</h3>
-            <p>
-                The Child archetype is the archetype that confronts us with our need to develop and take responsibility in our lives while retaining the appreciation for the wonders and endless possibilities of life. Many adults go through life still dependent in one way or another on an external source for survival, with the shadow child archetype as an excuse/rationale for this phenomena. 
-            </p>
-            <p>
-                Written by Myss: “The core issue of all the Child archetypes is dependency and responsibility: when to take responsibility, when to have healthy dependency, when to stand up to the group, and when to embrace communal life.” (myss.com)
-            </p>
-            <p>
-                The Child archetype has quite a few variations and is different for each person - if you’d like to explore some of them visit <a href="https://www.myss.com/free-resources/sacred-contracts-and-your-archetypes/appendix-the-four-archetypes-of-survival/" target="_blank">Myss’ site</a>.
-            </p>
-        </div>
-        <div>
-            <h3>Light/Shadow Aspects</h3>
-            <p>
-                <i>Light aspects</i>: ability to take responsibility and mature in the world, ability to handle seriousness of adult life with childlike wonder, ability to confront childlike fears to face the real world and handle life independently, ability to effectively bridge gap between childhood and adulthood, ability to handle finances responsibly
-            </p>
-            <p>
-                <i>Shadow aspects</i>: dependency on external sources for childlike indulgences, pervasive sense of entitlement and self-absorbed attitudes, blaming current situation of dependency on events from family that happened years ago, complete immersion in fantasy that dreams will come without effort/action, lack of reliability, lack of achieving or prioritizing financial stability
-            </p>
+            <div class="page-header">
+                <h1>Collective Child Archetype Stories</h1>
+            </div>
+        <div class="div-backdrop">
+            <div>
+                <h3>About the Child Archetype: Guardian of Innocence and Responsibility</h3>
+                <p>
+                    The Child archetype is the archetype that confronts us with our need to develop and take responsibility in our lives while retaining the appreciation for the wonders and endless possibilities of life. Many adults go through life still dependent in one way or another on an external source for survival, with the shadow child archetype as an excuse/rationale for this phenomena.
+                </p>
+                <p>
+                    Written by Myss: “The core issue of all the Child archetypes is dependency and responsibility: when to take responsibility, when to have healthy dependency, when to stand up to the group, and when to embrace communal life.” (myss.com)
+                </p>
+                <p>
+                    The Child archetype has quite a few variations and is different for each person - if you’d like to explore some of them visit <a href="https://www.myss.com/free-resources/sacred-contracts-and-your-archetypes/appendix-the-four-archetypes-of-survival/" target="_blank">Myss’ site</a>.
+                </p>
+            </div>
+            <div>
+                <h3>Light/Shadow Aspects</h3>
+                <p>
+                    <i>Light aspects</i>: ability to take responsibility and mature in the world, ability to handle seriousness of adult life with childlike wonder, ability to confront childlike fears to face the real world and handle life independently, ability to effectively bridge gap between childhood and adulthood, ability to handle finances responsibly
+                </p>
+                <p>
+                    <i>Shadow aspects</i>: dependency on external sources for childlike indulgences, pervasive sense of entitlement and self-absorbed attitudes, blaming current situation of dependency on events from family that happened years ago, complete immersion in fantasy that dreams will come without effort/action, lack of reliability, lack of achieving or prioritizing financial stability
+                </p>
+            </div>
         </div>
         <div class="page-header">
             <h2>All Child Archetype Stories</h2>
         </div>
     </div>
     <div class="container">
-        <div class="row">
+        <div class="row center-these-cards">
             {% for post in posts.items %}
                 <div class="card">
                     <div class="car-boy">
