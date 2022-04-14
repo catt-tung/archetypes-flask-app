@@ -59,6 +59,15 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #4a4e69
+}
+
+.page-header {
+  text-align: center;
+  margin: 30px;
+}
+
 .card {
   margin: 10px;
   max-width: 26rem;
@@ -80,7 +89,7 @@ a {
 }
 
 .allstories-page {
-  max-width: 1920px;
+  max-width: 1960px;
   margin: auto;
 }
 
@@ -94,5 +103,5 @@ a {
 
 .btn-primary:hover {
   background-color: #bbabb6;
-  color: #f4e1d9;
+  color: #fbf8ea;
 }
