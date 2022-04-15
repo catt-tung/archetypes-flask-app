@@ -3,13 +3,11 @@ A Python Flask Web App buit with Jinja with a PostgresSQL backend database. Styl
 
 ![heroimage](./myapp/static/Untitled%20design.png)
 ## About this App
-This app was created to build a treasure trove of stories from people about the survival archetypes from Caroline Myss' work in _Sacred Contracts_. According to Myss' work, each individual has twelve main archetypes that are always at work in our lives, four of which we all universally have, which are called the Survival Archetypes. While 
-
-My intention with building this app was to help us understand these archetypes through storytelling - both from writing out our own experiences and learning from the experiences of others. This has been the primary way I have come to understand archeypes - from sharing stories in my spiritual direction sessions and having them identified by my spiritual director. Slowly, I came to recognize and identify the survival archetypes when they showed up. It would have been incredibly useful for me at the time if there were more resources where I could learn about these archetypes, which is where this app comes to life.
-
+This app was created to build a treasure trove of stories about the survival archetypes from Caroline Myss' work in _Sacred Contracts_. According to Myss' work, each individual has twelve main archetypes that are always at work in our lives, four of which we all universally have, which are called the Survival Archetypes. 
 
 Becoming aware of our archetypes and how they are at play in our lives is the first step to mastering the ability to make conscious choices. The survival archetypes help us grow and mature into individuals who know how to recognize the true lesson each experience that comes to us provides. 
 
+My intention with building this app was to help us understand the survival archetypes through storytelling - both from writing out our own experiences, and learning from reading about the experiences of others. This has been the primary way I have come to understand archetypes - from sharing stories in my spiritual direction sessions and having my archetypes identified by my spiritual director. Slowly, I came to recognize and identify the survival archetypes when they showed up - allowing me to make conscious choices for change. It would have been incredibly useful for me at the time if there were more shared stories where I could learn about these archetypes, which is what this app intends to create.
 
 ## Technologies Used
 The following technologies were used to build this app:
@@ -31,7 +29,7 @@ Ideally I would like to have a different setup of the models where I could also 
 
 ![ERD](myapp/static/Screen%20Shot%202022-04-15%20at%201.29.43%20AM.png)
 
-In perhaps a different project, I would love for this to be extensible to _all_ the archetypes and create an API database to be able to search them - however given that there are prehaps hundreds of archetypes, this would really have to be a much more robust app with API search functionality. 
+In perhaps a different project, I would love for this to be extensible to _all_ the archetypes, and create an API database to be able to search them - however given that there are _hundreds_ of archetypes, this would really have to be a much more robust app, with API search functionalities and more filtering and display methods to make it practical and applicable. 
 
 ## Credits
 + This site's idea was inspired entirely by the works of Caroline Myss in Sacred Contracts, cited as follows: Myss, Caroline. Sacred Contracts: Awakening Your Divine Potential. Harmony, 2002.
