@@ -225,3 +225,12 @@ cite, figcaption {
 .center-this-text {
   text-align: center;
 }
+
+@media screen and (max-width: 767px){
+  h1 {
+    font-size: 3rem;
+  }
+  .div-backdrop {
+    padding: 2rem;
+  }
+}
