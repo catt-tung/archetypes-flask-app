@@ -230,7 +230,17 @@ cite, figcaption {
   h1 {
     font-size: 3rem;
   }
+  blockquote {
+    padding: 5px 0px 0px 10px;
+  }
+  figure {
+    margin: 0.6rem;
+    padding: 1.2rem;
+  }
   .div-backdrop {
     padding: 2rem;
+  }
+  #home-page-intro{
+    margin: 0.6rem;
   }
 }
